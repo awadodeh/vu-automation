@@ -1,0 +1,17 @@
+{
+ "scenarios": {
+  "Student-Login": {
+   "requests": [
+    "http://blazedemo.com"
+   ]
+  }
+ }, 
+ "execution": [
+  {
+   "ramp-up": 10, 
+   "hold-for": "5m", 
+   "concurrency": 100, 
+   "scenario": "quick-test"
+  }
+ ]
+}

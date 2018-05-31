@@ -1,0 +1,11 @@
+---
+execution:
+- concurrency: 100
+  hold-for: 5m
+  ramp-up: 10
+  scenario: quick-test
+scenarios:
+  Student-Login:
+    requests:
+    - http://blazedemo.com
+

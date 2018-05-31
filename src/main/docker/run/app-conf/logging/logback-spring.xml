@@ -1,0 +1,42 @@
+<configuration>
+   <property name="appName" value="@project.artifactId@" />
+   <property name="logFileDir" value="/ext-vol/app-logs" />
+   <property name="defaultPattern" value="%date %5level [%10.20thread] %30.30logger{30}:%-20.-20method -- %msg%n" />
+   <property name="detailPattern" value="%date %5level [%10.20thread] %40.40logger{40}:%-20.-20method:%5line -- %msg%n" />
+   <property name="fullDetailPattern" value="%date %5level [%10.20thread] %logger:%method:%line -- %msg%n" />
+
+   <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+      <encoder>
+         <pattern>${fullDetailPattern}</pattern>
+      </encoder>
+   </appender>
+
+   <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+      <!--See also http://logback.qos.ch/manual/appenders.html#RollingFileAppender -->
+      <File>${logFileDir}/${appName}.log</File>
+      <encoder>
+         <pattern>${defaultPattern}</pattern>
+      </encoder>
+      <rollingPolicy class="ch.qos.logback.core.rolling.FixedWindowRollingPolicy">
+         <maxIndex>5</maxIndex>
+         <FileNamePattern>${logFileDir}/${appName}.log.%i</FileNamePattern>
+      </rollingPolicy>
+      <triggeringPolicy class="ch.qos.logback.core.rolling.SizeBasedTriggeringPolicy">
+         <MaxFileSize>4MB</MaxFileSize>
+      </triggeringPolicy>
+   </appender>
+
+<!--
+   <logger name="edu.vanderbilt.mis" level="DEBUG" />
+   <logger name="edu.vanderbilt.vuit.adi" level="DEBUG" />
+   <logger name="org.mybatis" level="DEBUG" />
+   <logger name="org.hibernate" level="INFO" />
+   <logger name="org.springframework.orm.jpa" level="DEBUG" />
+   <logger name="org.springframework" level="DEBUG" />
+ -->
+
+   <root level="INFO">
+      <appender-ref ref="CONSOLE" />
+      <appender-ref ref="FILE" />
+   </root>
+</configuration>

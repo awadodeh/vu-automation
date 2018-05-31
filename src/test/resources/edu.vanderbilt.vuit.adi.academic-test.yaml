@@ -1,0 +1,10 @@
+debugEnabled: true
+
+logging:
+   level:
+      root: ERROR
+      edu.vanderbilt: DEBUG
+      org.hibernate: DEBUG
+      org.mybatis: DEBUG
+      org.apache.ibatis: TRACE
+      org.springframework.ws.client: TRACE

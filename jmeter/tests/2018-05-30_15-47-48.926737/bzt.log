@@ -1,0 +1,77 @@
+[2018-05-30 15:47:48,872 INFO root] Taurus CLI Tool v1.11.1
+[2018-05-30 15:47:48,872 DEBUG root] Command-line options: {'verbose': None, 'no_system_configs': None, 'quiet': None, 'log': '/tmp/bzt_Q6dfyo.log', 'option': None, 'aliases': []}
+[2018-05-30 15:47:48,873 DEBUG root] Python: CPython 2.7.15
+[2018-05-30 15:47:48,873 DEBUG root] OS: ('Darwin', 'vuitm08phtd7.local', '17.4.0', 'Darwin Kernel Version 17.4.0: Sun Dec 17 09:19:54 PST 2017; root:xnu-4570.41.2~1/RELEASE_X86_64', 'x86_64', 'i386')
+[2018-05-30 15:47:48,873 INFO root] Starting with configs: ['quick_test.yml']
+[2018-05-30 15:47:48,873 DEBUG root] Using personal config: /Users/owdaa/.bzt-rc
+[2018-05-30 15:47:48,873 INFO Engine] Configuring...
+[2018-05-30 15:47:48,873 DEBUG Engine] No machine configs dir: /usr/local/Cellar/bzt/1.11.1/libexec/bin/../etc/bzt.d
+[2018-05-30 15:47:48,873 DEBUG Engine] Base configs list: ['/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/resources/base-config.yml']
+[2018-05-30 15:47:48,873 DEBUG Engine.Configuration] Configs: ['/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/resources/base-config.yml']
+[2018-05-30 15:47:48,875 DEBUG Engine.Configuration] Reading /usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/resources/base-config.yml as YAML
+[2018-05-30 15:47:48,899 DEBUG Engine] User configs list: ['/Users/owdaa/.bzt-rc', 'quick_test.yml']
+[2018-05-30 15:47:48,900 DEBUG Engine.Configuration] Configs: ['/Users/owdaa/.bzt-rc', 'quick_test.yml']
+[2018-05-30 15:47:48,901 DEBUG Engine.Configuration] Reading /Users/owdaa/.bzt-rc as YAML
+[2018-05-30 15:47:48,905 DEBUG Engine.Configuration] Reading quick_test.yml as YAML
+[2018-05-30 15:47:48,907 DEBUG Engine.Configuration] Configs: ['/Users/owdaa/.bzt-rc', 'quick_test.yml']
+[2018-05-30 15:47:48,908 DEBUG Engine.Configuration] Reading /Users/owdaa/.bzt-rc as YAML
+[2018-05-30 15:47:48,912 DEBUG Engine.Configuration] Reading quick_test.yml as YAML
+[2018-05-30 15:47:48,926 DEBUG Engine] Requesting updates info: http://gettaurus.org/updates/?version=1.11.1&installID=macos-784f439d08fc
+[2018-05-30 15:47:48,931 INFO Engine] Artifacts dir: /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737
+[2018-05-30 15:47:48,932 DEBUG Engine] New artifact filename: /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/effective
+[2018-05-30 15:47:48,933 DEBUG Engine.Configuration] Dumping YAML config into /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/effective.yml
+[2018-05-30 15:47:48,952 DEBUG Engine.Configuration] Dumping JSON config into /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/effective.json
+[2018-05-30 15:47:48,953 DEBUG Engine] New artifact filename: /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/merged.yml
+[2018-05-30 15:47:48,953 DEBUG Engine.Configuration] Dumping YAML config into /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/merged.yml
+[2018-05-30 15:47:48,954 DEBUG Engine] New artifact filename: /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/merged.json
+[2018-05-30 15:47:48,955 DEBUG Engine.Configuration] Dumping JSON config into /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/merged.json
+[2018-05-30 15:47:48,955 DEBUG Engine] Add existing artifact (move=False): quick_test.yml
+[2018-05-30 15:47:48,955 DEBUG Engine] Copying quick_test.yml to /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/quick_test.yml
+[2018-05-30 15:47:48,956 DEBUG Engine.Environment] Replace 'TAURUS_ARTIFACTS_DIR' in environment
+[2018-05-30 15:47:48,956 DEBUG root] Closing log handler: /tmp/bzt_Q6dfyo.log
+[2018-05-30 15:47:48,957 DEBUG root] Switched writing logs to /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/bzt.log
+[2018-05-30 15:47:48,957 DEBUG root] Linting config
+[2018-05-30 15:47:48,959 WARNING root] at path 'execution.0.scenario': scenario 'quick-test' is used but isn't defined
+[2018-05-30 15:47:48,959 INFO Engine] Preparing...
+[2018-05-30 15:47:48,959 DEBUG Engine] Module config: consolidator defaultdict(None, {'class': 'bzt.modules.aggregator.ConsolidatingAggregator'})
+[2018-05-30 15:47:48,959 DEBUG root] Importing module: bzt.modules.aggregator
+[2018-05-30 15:47:49,213 DEBUG root] Loading class: 'ConsolidatingAggregator' from <module 'bzt.modules.aggregator' from '/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/modules/aggregator.pyc'>
+[2018-05-30 15:47:49,213 DEBUG Engine.consolidator] Buffer scaling setup: percentile 95.0 from [0.0, 50.0, 90.0, 95.0, 99.0, 99.9, 100.0] selected
+[2018-05-30 15:47:49,214 DEBUG Engine] Module config: monitoring defaultdict(None, {'class': 'bzt.modules.monitoring.Monitoring'})
+[2018-05-30 15:47:49,214 DEBUG root] Importing module: bzt.modules.monitoring
+[2018-05-30 15:47:49,216 DEBUG root] Loading class: 'Monitoring' from <module 'bzt.modules.monitoring' from '/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/modules/monitoring.pyc'>
+[2018-05-30 15:47:49,217 DEBUG Engine] Module config: local defaultdict(None, {'class': 'bzt.modules.provisioning.Local'})
+[2018-05-30 15:47:49,217 DEBUG root] Importing module: bzt.modules.provisioning
+[2018-05-30 15:47:49,217 DEBUG root] Loading class: 'Local' from <module 'bzt.modules.provisioning' from '/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/modules/provisioning.pyc'>
+[2018-05-30 15:47:49,217 DEBUG Engine] Module config: jmeter defaultdict(None, {'properties': defaultdict(None, {'jmeter.save.saveservice.autoflush': 'true', 'jmeter.save.saveservice.connect_time': 'true', 'summariser.name': '', 'jmeterengine.force.system.exit': 'true'}), 'class': 'bzt.modules.jmeter.JMeterExecutor', 'plugins': ['jpgc-casutg', 'jpgc-dummy', 'jpgc-ffw', 'jpgc-fifo', 'jpgc-functions', 'jpgc-json', 'jpgc-perfmon', 'jpgc-prmctl', 'jpgc-tst']})
+[2018-05-30 15:47:49,217 DEBUG root] Importing module: bzt.modules.jmeter
+[2018-05-30 15:47:49,269 DEBUG root] Loading class: 'JMeterExecutor' from <module 'bzt.modules.jmeter' from '/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/modules/jmeter.py'>
+[2018-05-30 15:47:49,269 DEBUG Engine.local] Preparing executor: None/4601166864
+[2018-05-30 15:47:49,269 WARNING Engine] Could not find location at path: quick-test
+[2018-05-30 15:47:49,270 ERROR root] Config Error: Scenario 'quick-test' not found in scenarios: ['Student-Login']
+[2018-05-30 15:47:49,275 DEBUG root] TaurusConfigError: Scenario 'quick-test' not found in scenarios: ['Student-Login']
+Traceback (most recent call last):
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/cli.py", line 249, in perform
+    self.engine.prepare()
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/engine.py", line 168, in prepare
+    self.__prepare_provisioning()
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/engine.py", line 514, in __prepare_provisioning
+    self.provisioning.prepare()
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/modules/provisioning.py", line 72, in prepare
+    executor.prepare()
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/modules/jmeter.py", line 267, in prepare
+    scenario = self.get_scenario()
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/modules/jmeter.py", line 201, in get_scenario
+    scenario_obj = super(JMeterExecutor, self).get_scenario(name=name, cache_scenario=False)
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/engine.py", line 1044, in get_scenario
+    scenario = scenarios.get(label, exc)
+  File "/usr/local/Cellar/bzt/1.11.1/libexec/lib/python2.7/site-packages/bzt/utils.py", line 189, in get
+    raise default
+TaurusConfigError: Scenario 'quick-test' not found in scenarios: ['Student-Login']
+[2018-05-30 15:47:49,275 INFO Engine] Post-processing...
+[2018-05-30 15:47:49,275 DEBUG Engine.consolidator] Consolidator buffer[0]: []
+[2018-05-30 15:47:49,277 DEBUG Engine.Configuration] Dumping YAML config into /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/effective.yml
+[2018-05-30 15:47:49,298 DEBUG Engine.Configuration] Dumping JSON config into /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/effective.json
+[2018-05-30 15:47:49,298 INFO root] Artifacts dir: /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737
+[2018-05-30 15:47:49,298 WARNING root] Done performing with code: 1
+[2018-05-30 15:47:49,299 DEBUG root] Closing log handler: /Users/owdaa/bitbucket/more/jmeter/tests/2018-05-30_15-47-48.926737/bzt.log

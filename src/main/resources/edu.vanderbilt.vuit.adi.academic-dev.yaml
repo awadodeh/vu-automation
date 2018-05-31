@@ -1,0 +1,9 @@
+debugEnabled: false
+
+datasource:
+   vudw:
+      url: jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = dbu05ld.ea.vanderbilt.edu) (PORT = 10922))) (CONNECT_DATA = (SERVICE_NAME = VUDWDEV.vuit.vanderbilt) (SERVER = dedicated)))
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      username: 
+      password: 
+      useRadius: false

@@ -1,0 +1,17 @@
+debugEnabled: false
+
+batch:
+   commitInterval: 100
+
+datasource:
+   vudw:
+      url: jdbc:oracle:thin:@(DESCRIPTION = (ADDRESS_LIST = (ADDRESS = (PROTOCOL = TCP)(HOST = dbu05ld.ea.vanderbilt.edu) (PORT = 10922))) (CONNECT_DATA = (SERVICE_NAME = VUDWDEV.vuit.vanderbilt) (SERVER = dedicated)))
+      driverClassName: oracle.jdbc.driver.OracleDriver
+      username: @datasource.vudw.userid@
+      password: @datasource.vudw.password@
+      useRadius: @datasource.useRadius@
+      serverId: @datasource.serverId@
+      poolProperties: 
+         initialSize: 0
+         maxActive: 10
+         maxIdle: 10       

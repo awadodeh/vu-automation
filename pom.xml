@@ -1,0 +1,152 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+   <parent>
+      <groupId>edu.vanderbilt.vuit.adi.maven.poms</groupId>
+      <artifactId>vuit-spring-boot-parent</artifactId>
+      <version>1.5.4.RELEASE_2.0.2-SNAPSHOT</version>
+   </parent>
+
+  <groupId>acad-automation</groupId>
+  <artifactId>edu.vanderbilt.vuit.adi.academic</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>Project name</name>
+  <description>Project description</description>
+
+  <prerequisites>
+     <maven>3.2.5</maven>
+  </prerequisites>
+
+  <scm>
+     <connection>scm:git:https://${user.name}@devops.app.vanderbilt.edu/bitbucket/scm/vumav/batch-template.git</connection>
+     <developerConnection>scm:git:https://${user.name}@devops.app.vanderbilt.edu/bitbucket/scm/vumav/batch-template.git</developerConnection>
+  </scm>
+
+  <properties>
+      <java.version>1.8</java.version>
+      <docker.authorId>vuit-acad</docker.authorId>
+      
+      <!-- default to blank so yaml file will parse -->
+      <datasource.vudw.userid></datasource.vudw.userid>
+      <datasource.vudw.password></datasource.vudw.password>
+      <datasource.serverId></datasource.serverId>
+      <datasource.useRadius></datasource.useRadius>
+   </properties>
+
+   <dependencies>
+   
+      <dependency>
+          <groupId>biz.paluch.logging</groupId>
+          <artifactId>logstash-gelf</artifactId>
+          <version>1.10.0</version>
+      </dependency>  
+      
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-batch</artifactId>
+      </dependency>
+
+      <dependency>
+         <groupId>edu.vanderbilt.vuit.adi.commons</groupId>
+         <artifactId>vuit-commons-lang</artifactId>
+         <version>4.0.1</version>
+      </dependency>
+
+      <dependency>
+         <groupId>edu.vanderbilt.vuit.adi.commons</groupId>
+         <artifactId>vuit-commons-spring-batch</artifactId>
+         <version>1.0.3</version>
+      </dependency>
+      
+      <dependency>
+         <groupId>com.oracle.weblogic</groupId>
+         <artifactId>ojdbc7</artifactId>
+         <version>12.1.3-0-0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>edu.vanderbilt.vuit.adi.commons</groupId>
+         <artifactId>radius-maven-datasource</artifactId>
+         <version>1.1.0</version>
+      </dependency>
+
+      <dependency>
+         <groupId>org.springframework.boot</groupId>
+         <artifactId>spring-boot-starter-test</artifactId>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.powermock</groupId>
+         <artifactId>powermock-api-mockito</artifactId>
+         <version>1.6.4</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.powermock</groupId>
+         <artifactId>powermock-module-junit4</artifactId>
+         <version>1.6.4</version>
+         <scope>test</scope>
+      </dependency>
+
+      <dependency>
+          <groupId>edu.vanderbilt.vuit.adi.commons</groupId>
+          <artifactId>vuit-commons-test</artifactId>
+          <version>4.0.0</version>
+          <scope>test</scope>
+      </dependency>
+
+      <dependency>
+         <groupId>org.springframework.batch</groupId>
+         <artifactId>spring-batch-test</artifactId>
+         <scope>test</scope>
+      </dependency>
+   </dependencies>
+
+   <build>
+      <plugins>
+         <plugin>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+         </plugin>
+      </plugins>
+
+      <resources>
+         <resource>
+            <directory>src/main/resources</directory>
+            <filtering>true</filtering>
+         </resource>
+         <resource>
+            <directory>src/main/docker/run</directory>
+            <targetPath>${docker.run.target.dir}</targetPath>
+            <filtering>true</filtering>
+         </resource>
+      </resources>
+      <testResources>
+         <testResource>
+            <directory>src/test/resources</directory>
+            <filtering>true</filtering>
+         </testResource>
+      </testResources>
+   </build>
+
+   <profiles>
+      <profile>
+         <id>local</id>
+         <properties>
+            <datasource.serverId>radius-developer-dbuser</datasource.serverId>
+            <datasource.useRadius>true</datasource.useRadius>
+         </properties>
+      </profile>
+      <profile>
+         <id>bamboo</id>
+         <properties>
+            <datasource.useRadius>false</datasource.useRadius>
+         </properties>
+      </profile>
+   </profiles>
+</project>
