@@ -105,6 +105,17 @@
          <artifactId>spring-batch-test</artifactId>
          <scope>test</scope>
       </dependency>
+       <dependency>
+           <groupId>edu.vanderbilt.mis.student</groupId>
+           <artifactId>student-model</artifactId>
+           <version>1.4.0</version>
+       </dependency>
+
+       <dependency>
+           <groupId>org.hibernate</groupId>
+           <artifactId>hibernate-core</artifactId>
+           <version>LATEST</version>
+       </dependency>
    </dependencies>
 
    <build>

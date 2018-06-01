@@ -6,11 +6,10 @@
                                  http://www.springframework.org/schema/batch
                                  http://www.springframework.org/schema/batch/spring-batch-2.2.xsd">
 
-<!-- 
-   <job id="someJob">
-      <step id="someStep">
-      </step>
-   </job>
--->
+    <job id="automationBatchJob">
+        <step id="executeAutomationBatchJob">
+            <tasklet ref="VUAutomationTestBatchTasklet"/>
+        </step>
+    </job>
 
 </beans:beans>

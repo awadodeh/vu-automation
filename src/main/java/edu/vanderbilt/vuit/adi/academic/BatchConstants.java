@@ -8,4 +8,6 @@ public interface BatchConstants {
    public static final List<String> ENV_NAMES = Arrays.asList( "local", "dev", "uat", "pts", "prd" );
 
    public static final String ARTIFACT_ID = "edu.vanderbilt.vuit.adi.academic";
+
+   public static final String TAURUS_KICK_OFF_COMMAND = "bzt";
 }
